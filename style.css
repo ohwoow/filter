@@ -111,3 +111,10 @@ a {
 .testimonials__item.open {
   display: block;
 }
+
+.testimonials__item-doctor.active {
+  display: block;
+}
+.testimonials__item-doctor.hide {
+  display: none;
+}

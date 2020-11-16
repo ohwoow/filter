@@ -25,6 +25,19 @@ const showDoctors = item => {
     if (item.classList.contains(spec)) {
       link.classList.add('selected')
     }
+
+    link.addEventListener('click', (e) => {
+      let doctorSurname = link.getAttribute('href').split('#')[1]
+
+      const childrens = [...item.children]
+      childrens.forEach(el => {
+        if (el.id === doctorSurname) {
+          childrens.forEach(children => children.classList.add('hide'))
+          el.classList.remove('hide')
+          el.classList.add('active')
+        }
+      })
+    })
   })
 }
 
