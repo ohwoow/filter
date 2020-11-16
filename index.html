@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="filter">
+    <div class="filter__inner">
+      <select class="filter__select">
+        <option value="all">Все отзывы</option>
+        <option value="reproductologist">Репродуктолог</option>
+        <option value="psychologist">Психолог</option>
+        <option value="embryologist">Эмбриолог</option>
+      </select>
+      <div class="filter__doctors">
+        <a href="#kaleeva" class="filter__link" data-spec="reproductologist">калеева</a>
+        <a href="#ajder" class="filter__link" data-spec="psychologist">аждер</a>
+        <a href="#saenko" class="filter__link" data-spec="reproductologist">саенко</a>
+        <a href="#danilova" class="filter__link" data-spec="embryologist">данилова</a>
+      </div>
+      <div class="filter__buttons">
+        <button class="filter__btn filter__btn_social" data-value="social" type="button">Соц сети / мессенджеры</button>
+        <button class="filter__btn filter__btn_video" data-value="video" type="button">видео отзывы</button>
+        <button class="filter__btn filter__btn_text" data-value="text" type="button">текстовые отзывы</button>
+        <button class="filter__btn filter__btn_feedback" type="button">оставить отзыв</button>
+      </div>
+    </div>
+  </div>
+  <div class="testimonials">
+    <div class="testimonials__item reproductologist">
+      reproductologist
+    </div>
+    <div class="testimonials__item psychologist">
+      psychologist
+    </div>
+    <div class="testimonials__item embryologist">
+      embryologist
+    </div>
+    <div class="testimonials__item social">
+      social
+    </div>
+    <div class="testimonials__item video">
+      video
+    </div>
+    <div class="testimonials__item text">
+      text
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
