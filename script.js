@@ -62,6 +62,8 @@ const chooseDoctor = () => {
     let value = this.value
 
     testimonialsItem.forEach(item => {
+      const childrens = [...item.children]
+
       if (item.classList.contains(value)) {
 
         filterLinks.forEach(link => {
@@ -74,7 +76,6 @@ const chooseDoctor = () => {
       } else if (value === 'all') {
         hideDoctors()
         showTestimonials()
-        const childrens = [...item.children]
         showChildren(childrens)
       }
     })
