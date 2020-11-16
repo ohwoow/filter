@@ -17,6 +17,14 @@ const showTestimonials = () => {
   })
 }
 
+const hideChildren = childrens => {
+  childrens.forEach(children => children.classList.add('hide'))
+}
+
+const showChildren = childrens => {
+  childrens.forEach(children => children.classList.remove('hide'))
+}
+
 const showDoctors = item => {
   filterButtons.classList.add('close')
   filterDoctors.classList.add('open')
@@ -32,7 +40,7 @@ const showDoctors = item => {
       const childrens = [...item.children]
       childrens.forEach(el => {
         if (el.id === doctorSurname) {
-          childrens.forEach(children => children.classList.add('hide'))
+          hideChildren(childrens)
           el.classList.remove('hide')
           el.classList.add('active')
         }
@@ -66,6 +74,8 @@ const chooseDoctor = () => {
       } else if (value === 'all') {
         hideDoctors()
         showTestimonials()
+        const childrens = [...item.children]
+        showChildren(childrens)
       }
     })
 
